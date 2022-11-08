@@ -106,10 +106,10 @@ def input_user(chat):
     chat_ori = preprocess(chat_ori)
     
     #Prediksi intent
-    vectorizer = joblib.load("../model/vectorize.pkl")
+    vectorizer = joblib.load("./vectorize.pkl")
     chat = vectorizer.transform([chat])
 
-    filename = "../model/svm.model"
+    filename = "./svm.model"
     model = pickle.load(open(filename, 'rb'))
 
     pred_intent = model.predict(chat)
@@ -119,7 +119,7 @@ def input_user(chat):
     # print("Text intent: ", txt_intent)
     
     #Get data JSON
-    path = "../data/data.json"
+    path = "./data.json"
     jp = json_parser()
     jp.parse(path)
     df_train = jp.get_dataframe()
