@@ -1,0 +1,71 @@
+<!--CHATBOT WIDGET INTERFACE-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <!-- Button untuk chat icon widget -->
+    <div class ="chat_icon">
+        <img src="/static/images/img.jpg" width="50" height="50">
+    </div>
+    
+    <!-- Field semua yang di dalam widget -->
+    <div class="wrapper">
+    
+        <!-- Field untuk title-->
+        <div class="title">
+            <div class="image">
+            <img src="/static/images/Group 16.png" width="50" height="50">
+            <p class="text">EVAs Bot</p>
+            </div>
+        </div>
+        
+        <!-- Field untuk message -->
+        <div class="msger-chat">
+            <div class="msg left-msg">
+                <div class="msg-bubble">
+                    <!-- Untuk name and time -->
+                    <div class="msg-info">
+                        <div class="msg-info-name">EVAs</div>
+                        <div class="msg-info-time">12:45</div>
+                    </div>
+                    
+                    <!-- Settled message -->
+                    <div class="msg-text"> <!--msg-header-->
+                        <p>Hi, Selamat datang di EVAs Bot Universitas Klabat! Di sini kamu dapat mengetahui informasi tentang asrama dan memesan kamar asrama. 😄</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Field input text -->
+        <form class="msger-inputarea" action="url" method="GET">
+        <hr width="70%" 
+            align="center" >
+            <input type="text" class="msger-input" id="textInput" placeholder="Enter your message...">
+            <button type="submit" class="msger-send-btn">
+                <img src="/static/images/Vector.png">
+            </button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+
+    
+    <!-- akses javascript file -->
+    <script type="text/javascript" src="/static/js/actions.js"></script>
+    
+</body>
+</html>
